@@ -37,7 +37,7 @@ module Stupidedi
               b::Element(e::Situational, "Reference Identification")),
             b::Segment(60, s::PER, "Administrative Communications Contact",
               r::Situational, d::RepeatCount.bounded(3),
-              b::Element(e::Required,    "Contact Function Code", b::Values("BD")),
+              b::Element(e::Required,    "Contact Function Code", b::Values("BD", "OC")),
               b::Element(e::Situational, "Name"),
               b::Element(e::Situational, "Communication Number Qualifier", b::Values("TE")),
               b::Element(e::Situational, "Communication Number")),
