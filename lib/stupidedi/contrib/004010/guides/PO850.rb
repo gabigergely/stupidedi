@@ -97,11 +97,11 @@ module Stupidedi
               b::Segment(20, s::AMT, "Monetary Amount",
                 r::Situational, d::RepeatCount.bounded(1),
                 b::Element(e::Required,    "Amount Qualifier", b::Values("TT")),
-                b::Element(e::Required,    "Monetary Amount"))),
-            b::Segment(30, s:: SE, "Transaction Set Trailer",
-              r::Required, d::RepeatCount.bounded(1),
-              b::Element(e::Required,    "Number of Included Segments"),
-              b::Element(e::Required,    "Transaction Set Control Number")))))
+                b::Element(e::Required,    "Monetary Amount")),
+              b::Segment(30, s:: SE, "Transaction Set Trailer",
+                r::Required, d::RepeatCount.bounded(1),
+                b::Element(e::Required,    "Number of Included Segments"),
+                b::Element(e::Required,    "Transaction Set Control Number"))))
 
       end
     end

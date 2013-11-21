@@ -4553,7 +4553,7 @@ module Stupidedi
           E319  = t::AN.new(:E319 , "Temperature Control"                  , 3, 6)
           E324  = t::AN.new(:E324 , "Purchase Order Number"                , 1, 22)
           E328  = t::AN.new(:E328 , "Release Number"                       , 1, 30)
-          E329  = t::ID.new(:E329 , "Transaction Set Control Number"       , 4, 9)
+          E329  = t::AN.new(:E329 , "Transaction Set Control Number"       , 4, 9)
           E330  = t:: R.new(:E330 , "Quantity Ordered"                     , 1, 15)
           E335  = t::ID.new(:E335 , "Transportation Terms Code"            , 3, 3)
           E337  = t::TM.new(:E337 , "Time"                                 , 4, 4)
