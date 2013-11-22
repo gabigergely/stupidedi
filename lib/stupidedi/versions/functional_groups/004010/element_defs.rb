@@ -4580,6 +4580,7 @@ module Stupidedi
           E355 = t::ID.new(:E355 , "Unit or Basis for Measurement Code"    , 2, 2,
             s::CodeList.build(
               "FA" => "Fahrenheit",
+              "GA" => "Gallon",
               "CA" => "Case",
               "EA" => "Each",
               "LB" => "Pound",
