@@ -37,7 +37,7 @@ module Stupidedi
               b::Element(e::Situational, "Reference Identification")),
             b::Segment(60, s::PER, "Administrative Communications Contact",
               r::Situational, d::RepeatCount.bounded(3),
-              b::Element(e::Required,    "Contact Function Code", b::Values("BD")),
+              b::Element(e::Required,    "Contact Function Code", b::Values("BD", "OC")),
               b::Element(e::Situational, "Name"),
               b::Element(e::Situational, "Communication Number Qualifier", b::Values("TE")),
               b::Element(e::Situational, "Communication Number")),
@@ -93,11 +93,15 @@ module Stupidedi
               b::Segment(10, s::CTT, "Transaction Totals",
                 r::Situational, d::RepeatCount.bounded(1),
                 b::Element(e::Required,    "Number of Line Items"),
-                b::Element(e::Situational, "Hash Total"))),
-            b::Segment(30, s:: SE, "Transaction Set Trailer",
-              r::Required, d::RepeatCount.bounded(1),
-              b::Element(e::Required,    "Number of Included Segments"),
-              b::Element(e::Required,    "Transaction Set Control Number")))))
+                b::Element(e::Situational, "Hash Total")),
+              b::Segment(20, s::AMT, "Monetary Amount",
+                r::Situational, d::RepeatCount.bounded(1),
+                b::Element(e::Required,    "Amount Qualifier", b::Values("TT")),
+                b::Element(e::Required,    "Monetary Amount")),
+              b::Segment(30, s:: SE, "Transaction Set Trailer",
+                r::Required, d::RepeatCount.bounded(1),
+                b::Element(e::Required,    "Number of Included Segments"),
+                b::Element(e::Required,    "Transaction Set Control Number"))))
 
       end
     end

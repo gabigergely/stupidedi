@@ -32,9 +32,9 @@ module Stupidedi
 
           d::TableDef.header("Table 3 - Summary",
             d::LoopDef.build("CTT", d::RepeatCount.bounded(1),
-              s::CTT.use( 10, r::Optional,  d::RepeatCount.bounded(1))),
-
-            s:: SE.use( 30, r::Mandatory, d::RepeatCount.bounded(1))))
+              s::CTT.use( 10, r::Optional,  d::RepeatCount.bounded(1)),
+              s::AMT.use( 20, r::Optional,  d::RepeatCount.bounded(1)),
+              s:: SE.use( 30, r::Mandatory, d::RepeatCount.bounded(1)))))
 
       end
     end
